@@ -1,6 +1,6 @@
 package autox.elements;
 
-public class Blinker {
+public class Indicator {
     public void LeftIndicatorOn(){
 
     }

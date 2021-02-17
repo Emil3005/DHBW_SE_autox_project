@@ -3,10 +3,10 @@ import autox.elements.*;
 
 public class AutoX {
     Chassis[] chassis;
-    ElectricEngine[] electricEngine;
+    IElectricEngine[] electricEngine;
     LED_Headlight[] led_headLights;
     BrakeLight[] brakeLights;
-    Blinker[] blinkers;
+    Indicator[] indicators;
     Door[] doors;
     Seat[] seats;
     Wheel[] wheels;
@@ -20,7 +20,7 @@ public class AutoX {
         electricEngine = builder.electricEngine;
         led_headLights = builder.led_headLight;
         brakeLights = builder.brakeLights;
-        blinkers = builder.blinkers;
+        indicators = builder.indicators;
         doors = builder.doors;
         seats = builder.seats;
         wheels = builder.wheels;
@@ -32,10 +32,10 @@ public class AutoX {
 
 public static class Builder {
     Chassis[] chassis;
-    ElectricEngine[] electricEngine;
+    IElectricEngine[] electricEngine;
     LED_Headlight[] led_headLight;
     BrakeLight[] brakeLights;
-    Blinker[] blinkers;
+    Indicator[] indicators;
     Door[] doors;
     Seat[] seats;
     Wheel[] wheels;
@@ -50,7 +50,7 @@ public static class Builder {
     }
 
     public Builder electricMotor(int amount) {
-        electricEngine = new ElectricEngine[amount];
+        electricEngine = new IElectricEngine[amount];
         return this;
     }
 
@@ -65,7 +65,7 @@ public static class Builder {
     }
 
     public Builder blinker(int amount) {
-        blinkers = new Blinker[amount];
+        indicators = new Indicator[amount];
         return this;
     }
 

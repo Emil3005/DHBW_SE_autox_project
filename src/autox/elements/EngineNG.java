@@ -24,11 +24,7 @@ public class EngineNG implements IElectricEngine {
 
     @Override
     public void move() {
-        int consumption=3;
-        for(int i=0;i<consumption;i++){
-            for(int j=0;j<batteries.length;j++){
+        battery.usage(3);
 
-            }
-        }
     }
 }

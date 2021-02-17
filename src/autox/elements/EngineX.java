@@ -24,6 +24,6 @@ public class EngineX implements IElectricEngine {
 
     @Override
     public void move() {
-
+        battery.usage(3);
     }
 }
