@@ -16,5 +16,7 @@ public class BuilderTask {
                 .wheel(4)
                 .build();
 
+        System.out.println("done");
+
     }
 }
