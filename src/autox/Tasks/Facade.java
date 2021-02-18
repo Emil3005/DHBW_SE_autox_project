@@ -2,21 +2,45 @@ package autox.Tasks;
 import autox.cars.AutoX;
 import autox.elements.*;
 public class Facade {
-    AutoX autox;
-    IElectricEngine engine;
-    LED_Headlight led_headlight;
-    GPS gps;
-    ICamera camera;
-    Brake brake;
-    Indicator indicator;
-    ILidar lidar;
-    BrakeLight brakeLight;
+    public Facade(){
+        System.out.println("Facade Operation started");
+
+        this.startup();
+        this.move(40,20);
+        this.leftTurn(40,20);
+        this.rightTurn(40,20);
+        emergencyStop();
+        shutdown();
+        stop();
+        System.out.println("Facade Operation done");
+    }
+
+    public static void main(String... args) {
+        System.out.println("Facade Operation started");
+        Facade facade = new Facade();
+            facade.startup();
+            facade.move(40,20);
+            facade.leftTurn(40,20);
+            facade.rightTurn(40,20);
+            facade.emergencyStop();
+            facade.shutdown();
+            facade.stop();
+        System.out.println("Facade Operation done");
+    }
+    EngineX engine              = new EngineX();
+    LED_Headlight led_headlight = new LED_Headlight();
+    GPS gps                     = new GPS();
+    ICamera camera              = new CameraV1();
+    Brake brake                 = new Brake();
+    Indicator indicator         = new Indicator();
+    ILidar lidar                = new LidarNG();
+    BrakeLight brakeLight       = new BrakeLight();
 
     public void startup(){
         engine.EngineOn();
         led_headlight.LED_On();
         gps.GPS_On();
-        gps.GPSCOnnectSatellite("118.75");
+        gps.GPSConnectSatellite("118.75");
         camera.CameraOn();
         lidar.LidarOn();
         indicator.LeftIndicatorOff();
@@ -59,9 +83,10 @@ public class Facade {
         engine.EngineOff();
         brakeLight.BrakeLightOff();
         led_headlight.LED_Off();
-        indicator.HaardWarningOff();
+        indicator.HazardWarningOff();
         gps.GPS_Off();
         camera.CameraOff();
         lidar.LidarOff();
     }
+
 }

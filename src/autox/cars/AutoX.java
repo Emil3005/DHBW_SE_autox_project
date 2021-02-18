@@ -30,6 +30,7 @@ public class AutoX {
         ILidars = builder.ILidars;
     }
 
+
 public static class Builder {
     Chassis[] chassis;
     IElectricEngine[] electricEngine;
@@ -103,6 +104,7 @@ public static class Builder {
         ILidars = new ILidar[amount];
         return this;
     }
+
 
 
     public AutoX build() {
