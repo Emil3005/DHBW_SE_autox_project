@@ -1,4 +1,4 @@
-package autox.Tasks;
+package autox.Tasks.AllTasks;
 
 import autox.Tasks.*;
 import autox.cars.AutoX;
@@ -15,6 +15,8 @@ public class RunAllTests {
         Facade facade= new Facade();
         StateTask stateTask = new StateTask();
         CommandTask commandTask = new CommandTask("AutoX23");
+        ObserverTask observerTask = new ObserverTask();
+        MementoTask mementoTask = new MementoTask();
     }
 
 
