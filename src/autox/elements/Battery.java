@@ -1,4 +1,4 @@
-package autox.elements.battery;
+package autox.elements;
 
 public class Battery {
     int[]batteriesUsage = {1,1,1,1,1,1,1,1,};

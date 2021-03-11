@@ -3,6 +3,11 @@ import autox.cars.AutoX;
 import autox.elements.*;
 public class Facade {
     public Facade(){
+        start();
+
+    }
+
+    private void start() {
         System.out.println("Facade Operation started");
 
         this.startup();

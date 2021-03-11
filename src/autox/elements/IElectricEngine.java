@@ -1,7 +1,5 @@
 package autox.elements;
 
-import autox.elements.battery.Battery;
-
 public interface IElectricEngine {
     Battery battery = new Battery();
     public void EngineOn();

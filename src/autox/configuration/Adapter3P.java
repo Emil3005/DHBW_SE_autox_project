@@ -1,5 +1,5 @@
 package autox.configuration;
-import autox.elements.battery.Battery;
+import autox.elements.Battery;
 
 public class Adapter3P extends Battery implements ILoadingStation {
 
